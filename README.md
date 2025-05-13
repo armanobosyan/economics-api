@@ -1,7 +1,7 @@
 
 # Economic Data API Microservice (ED-API)
 
-A production-ready **REST API** that delivers structured **macroeconomic data per country**, covering hundreds of real-time and historical indicators such as GDP, inflation, unemployment, interest rates, housing, trade, and more. All data is from public sources like **Trading Economics** and exposed through clean, filterable JSON APIs.
+A production-ready **REST API** that delivers structured **macroeconomic data per country**, covering hundreds of real-time and historical indicators such as GDP, inflation, unemployment, interest rates, housing, trade, and more. All data is from public sources like Trading Economics and exposed through clean, **filterable JSON APIs**.
 
 ---
 
@@ -93,6 +93,8 @@ This API is fully optimized for deployment on:
 ## All Endpoints
 All endpoints return data in JSON format and support dynamic `Related=` filtering.
 ---
+```http
+Countries Overview
 /v1/economics/countries-overview
 /v1/economics/countries-overview?Country=China
 /v1/economics/<country>/overview
@@ -117,6 +119,7 @@ All endpoints return data in JSON format and support dynamic `Related=` filterin
 /v1/economics/<country>/overview?Related=Building Permits
 /v1/economics/<country>/overview?Related=Personal Income Tax Rate
 
+GDP
 /v1/economics/<country>/GDP
 /v1/economics/<country>/GDP?Related=GDP Growth Rate
 /v1/economics/<country>/GDP?Related=GDP Annual Growth Rate
@@ -138,6 +141,7 @@ All endpoints return data in JSON format and support dynamic `Related=` filterin
 /v1/economics/<country>/GDP?Related=GDP from Transport
 /v1/economics/<country>/GDP?Related=GDP from Utilities
 
+Labour
 /v1/economics/<country>/labour
 /v1/economics/<country>/labour?Related=Unemployment Rate
 /v1/economics/<country>/labour?Related=Non Farm Payrolls
@@ -180,6 +184,7 @@ All endpoints return data in JSON format and support dynamic `Related=` filterin
 /v1/economics/<country>/labour?Related=Jobless Claims 4-week Average
 /v1/economics/<country>/labour?Related=Part Time Employment
 
+Prices
 /economics/<country>/prices
 /v1/economics/<country>/prices?Related=Inflation Rate
 /v1/economics/<country>/prices?Related=Inflation Rate MoM
@@ -224,6 +229,7 @@ All endpoints return data in JSON format and support dynamic `Related=` filterin
 /v1/economics/<country>/prices?Related=Inflation Expectations
 /v1/economics/<country>/prices?Related=PCE Price Index
 
+Health
 /v1/economics/<country>/health
 /v1/economics/<country>/health?Related=Coronavirus Vaccination Rate
 /v1/economics/<country>/health?Related=Coronavirus Vaccination Total
@@ -234,6 +240,7 @@ All endpoints return data in JSON format and support dynamic `Related=` filterin
 /v1/economics/<country>/health?Related=Medical Doctors
 /v1/economics/<country>/health?Related=Nurses
 
+Money
 /v1/economics/<country>/money
 /v1/economics/<country>/money?Related=Interest Rate
 /v1/economics/<country>/money?Related=Interbank Rate
@@ -252,6 +259,7 @@ All endpoints return data in JSON format and support dynamic `Related=` filterin
 /v1/economics/<country>/money?Related=Private Debt to GDP
 /v1/economics/<country>/money?Related=Repo Rate
 
+Trade
 /v1/economics/<country>/trade
 /v1/economics/<country>/trade?Related=Balance of Trade
 /v1/economics/<country>/trade?Related=Current Account
@@ -274,6 +282,7 @@ All endpoints return data in JSON format and support dynamic `Related=` filterin
 /v1/economics/<country>/trade?Related=Tourist Arrivals
 /v1/economics/<country>/trade?Related=Weapons Sales
 
+Government
 /v1/economics/<country>/government
 /v1/economics/<country>/government?Related=Government Debt to GDP
 /v1/economics/<country>/government?Related=Government Budget
@@ -293,7 +302,7 @@ All endpoints return data in JSON format and support dynamic `Related=` filterin
 /v1/economics/<country>/government?Related=Social Security Rate For Employees
 /v1/economics/<country>/government?Related=Withholding Tax Rate
 
-
+Business
 /v1/economics/<country>/business
 /v1/economics/<country>/business?Related=Business Confidence
 /v1/economics/<country>/business?Related=Manufacturing PMI
@@ -400,6 +409,7 @@ All endpoints return data in JSON format and support dynamic `Related=` filterin
 /v1/economics/<country>/business?Related=Refinery Crude Runs
 /v1/economics/<country>/business?Related=Steel Production
 
+Consumer
 /v1/economics/<country>/consumer
 /v1/economics/<country>/consumer?Related=Consumer Confidence
 /v1/economics/<country>/consumer?Related=Retail Sales MoM
@@ -430,6 +440,7 @@ All endpoints return data in JSON format and support dynamic `Related=` filterin
 /v1/economics/<country>/consumer?Related=Gasoline Prices
 /v1/economics/<country>/consumer?Related=Households Debt to GDP
 
+Housing
 /v1/economics/<country>/housing
 /v1/economics/<country>/housing?Related=Building Permits
 /v1/economics/<country>/housing?Related=Housing Starts
@@ -467,7 +478,7 @@ All endpoints return data in JSON format and support dynamic `Related=` filterin
 /v1/economics/<country>/housing?Related=Single Family Home Prices
 /v1/economics/<country>/housing?Related=Price to Rent Ratio
 /v1/economics/<country>/housing?Related=Residential Property Prices
-
+```
 ---
 
 ## Getting Started
