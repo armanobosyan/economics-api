@@ -21,32 +21,6 @@ app = Flask(__name__)
 ### END # Flask Parameters ###
 
 
-### BEGIN # CACHE # Set up cache for sfinance requests ###
-# Configurable cache settings with safe parsing for expiration
-cache_name = os.environ.get('SUGRA_API_CACHE_NAME', 'sfinance.cache')
-try:
-    cache_expire_after = int(os.environ.get('SUGRA_API_CACHE_EXPIRY', 3600))  # Defaults to 1 hour
-except ValueError:
-    cache_expire_after = 3600  # Default to 1 hour if parsing fails
-# Creating a cached session with improved error handling and backend configuration
-try:
-    session = requests_cache.CachedSession(
-        cache_name=cache_name,
-        expire_after=cache_expire_after,
-        backend='sqlite',  # Example: Using SQLite backend; adjust based on your needs
-        allowable_methods=('GET', 'POST')  # Cache GET and POST requests
-    )
-    session.headers['User-agent'] = 'Mozilla/5.0'  # Custom User-Agent
-except Exception as e:
-    # Handle cache setup errors (log or take corrective action)
-    print(f"Error setting up request cache: {e}")
-from flask import request  # Import the request object
-
-app.config['CACHE_TYPE'] = 'simple'  # Consider 'redis' or other types for production
-cache = Cache(app)
-### END # CACHE # Set up cache for sfinance requests ###
-
-
 ### BEGIN # Dataframe # Define Utility Functions ###
 def dataframe_to_json(df, date_col=None):
     """
