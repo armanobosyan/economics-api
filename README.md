@@ -94,7 +94,8 @@ This API is fully optimized for deployment on:
 All endpoints return data in JSON format and support dynamic `Related=` filtering.
 ---
 ```http
-Countries Overview
+
+**Countries Overview**
 /v1/economics/countries-overview
 /v1/economics/countries-overview?Country=China
 /v1/economics/<country>/overview
@@ -119,7 +120,7 @@ Countries Overview
 /v1/economics/<country>/overview?Related=Building Permits
 /v1/economics/<country>/overview?Related=Personal Income Tax Rate
 
-GDP
+/v1/
 /v1/economics/<country>/GDP
 /v1/economics/<country>/GDP?Related=GDP Growth Rate
 /v1/economics/<country>/GDP?Related=GDP Annual Growth Rate
@@ -141,7 +142,7 @@ GDP
 /v1/economics/<country>/GDP?Related=GDP from Transport
 /v1/economics/<country>/GDP?Related=GDP from Utilities
 
-Labour
+/v1/
 /v1/economics/<country>/labour
 /v1/economics/<country>/labour?Related=Unemployment Rate
 /v1/economics/<country>/labour?Related=Non Farm Payrolls
@@ -184,8 +185,8 @@ Labour
 /v1/economics/<country>/labour?Related=Jobless Claims 4-week Average
 /v1/economics/<country>/labour?Related=Part Time Employment
 
-Prices
-/economics/<country>/prices
+**Prices**
+/v1/economics/<country>/prices
 /v1/economics/<country>/prices?Related=Inflation Rate
 /v1/economics/<country>/prices?Related=Inflation Rate MoM
 /v1/economics/<country>/prices?Related=Consumer Price Index CPI
@@ -229,7 +230,7 @@ Prices
 /v1/economics/<country>/prices?Related=Inflation Expectations
 /v1/economics/<country>/prices?Related=PCE Price Index
 
-Health
+**Health**
 /v1/economics/<country>/health
 /v1/economics/<country>/health?Related=Coronavirus Vaccination Rate
 /v1/economics/<country>/health?Related=Coronavirus Vaccination Total
@@ -240,7 +241,7 @@ Health
 /v1/economics/<country>/health?Related=Medical Doctors
 /v1/economics/<country>/health?Related=Nurses
 
-Money
+**Money**
 /v1/economics/<country>/money
 /v1/economics/<country>/money?Related=Interest Rate
 /v1/economics/<country>/money?Related=Interbank Rate
@@ -259,7 +260,7 @@ Money
 /v1/economics/<country>/money?Related=Private Debt to GDP
 /v1/economics/<country>/money?Related=Repo Rate
 
-Trade
+**Trade**
 /v1/economics/<country>/trade
 /v1/economics/<country>/trade?Related=Balance of Trade
 /v1/economics/<country>/trade?Related=Current Account
@@ -302,7 +303,7 @@ Government
 /v1/economics/<country>/government?Related=Social Security Rate For Employees
 /v1/economics/<country>/government?Related=Withholding Tax Rate
 
-Business
+**Business**
 /v1/economics/<country>/business
 /v1/economics/<country>/business?Related=Business Confidence
 /v1/economics/<country>/business?Related=Manufacturing PMI
@@ -409,7 +410,7 @@ Business
 /v1/economics/<country>/business?Related=Refinery Crude Runs
 /v1/economics/<country>/business?Related=Steel Production
 
-Consumer
+**Consumer**
 /v1/economics/<country>/consumer
 /v1/economics/<country>/consumer?Related=Consumer Confidence
 /v1/economics/<country>/consumer?Related=Retail Sales MoM
@@ -440,7 +441,7 @@ Consumer
 /v1/economics/<country>/consumer?Related=Gasoline Prices
 /v1/economics/<country>/consumer?Related=Households Debt to GDP
 
-Housing
+**Housing**
 /v1/economics/<country>/housing
 /v1/economics/<country>/housing?Related=Building Permits
 /v1/economics/<country>/housing?Related=Housing Starts
