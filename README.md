@@ -93,8 +93,7 @@ This API is fully optimized for deployment on:
 ## All Endpoints
 All endpoints return data in JSON format and support dynamic `Related=` filtering.
 ---
-```http
-
+```
 **Countries Overview**
 /v1/economics/countries-overview
 /v1/economics/countries-overview?Country=China
@@ -120,7 +119,7 @@ All endpoints return data in JSON format and support dynamic `Related=` filterin
 /v1/economics/<country>/overview?Related=Building Permits
 /v1/economics/<country>/overview?Related=Personal Income Tax Rate
 
-/v1/
+**GDP**
 /v1/economics/<country>/GDP
 /v1/economics/<country>/GDP?Related=GDP Growth Rate
 /v1/economics/<country>/GDP?Related=GDP Annual Growth Rate
@@ -142,7 +141,7 @@ All endpoints return data in JSON format and support dynamic `Related=` filterin
 /v1/economics/<country>/GDP?Related=GDP from Transport
 /v1/economics/<country>/GDP?Related=GDP from Utilities
 
-/v1/
+**Labour**
 /v1/economics/<country>/labour
 /v1/economics/<country>/labour?Related=Unemployment Rate
 /v1/economics/<country>/labour?Related=Non Farm Payrolls
