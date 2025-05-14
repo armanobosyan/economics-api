@@ -8,12 +8,19 @@ A production-ready **REST API** that delivers structured **macroeconomic data pe
 ## Features
 
 **Granular Economic Data** – 500+ economic indicators per country
+
 **Topic & Filter Support** – Easily access sub-categories via `?Related=...`
+
 **Structured API** – Clean, consistent endpoint architecture
+
 **Live Economic Calendar** via TradingView
+
 **OpenAPI-compatible schema** for documentation integration
+
 **Real-time Data** No database required
+
 **Zero API keys**, zero auth – public data, stateless design
+
 
 ---
 
