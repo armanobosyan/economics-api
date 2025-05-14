@@ -35,6 +35,11 @@ All endpoints return data in JSON format and support dynamic `Related=` filterin
 
 ---
 
+## Live Demo Endpoints
+https://economics-api.apidog.io
+
+---
+
 ## Categories Covered
 
 - `overview`
